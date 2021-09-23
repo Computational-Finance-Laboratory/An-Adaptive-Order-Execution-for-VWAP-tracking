@@ -19,11 +19,11 @@ an order simulation system by using a historical data set from Stock Exchange of
 ### Installation
 * Install all necessary python libraries
 * Install Node.js
-* Use "npm install" at ./cmdf-frontend
+* Use "npm install" at ./Frontend
 
 ### How to run
-* Use "npm start" at ./cmdf-frontend. The frontend part will run on port 3000
-* At ./cmdf use "python backend_server.py". The backend part will run on port 1111
+* Use "npm start" at ./Frontend. The frontend part will run on port 3000
+* At ./Backend use "python backend_server.py". The backend part will run on port 1111
 * go to port 3000 in your browser to use website
 
 ### Contirbutors
