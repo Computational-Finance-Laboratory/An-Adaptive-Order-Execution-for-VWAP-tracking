@@ -43,5 +43,3 @@ Stock Exchange of Thailand (SET).
 * Olan    Sanguanprasit
 * Rossukon Kasikijvorakul
 * Wanawat    Thawatwong
-
-Test edit
