@@ -1,12 +1,10 @@
-## An Adaptive Order Execution for VWAP tracking
-an execution plan for high
-frequency trading, which aims to buy or sell following the market
-VWAP (Volume Weight Average Price) as a price target with
-no stock unit left. By sending execution orders, the algorithm
-will provide volume profile and the ratio between Limit Order
-(LO) and Market Order (MO). Then, the algorithm is tested in
-simulation queue system by using historical real data from The
-Stock Exchange of Thailand (SET).
+## An Adaptive Order Execution Strategy for VWAP tracking
+This folder contains related materials of an adaptive execution strategy for high
+frequency trading in SET (Stock Exchange of Thailand). The objective of the strategy is to buy or sell stocks for a specific amount in SET to match the actual daily market
+VWAP (Volume-Weighted Average Price) as much as possible in a specified time interval for daytrading. By sending required amounts of stocks to acquire or liquidate in a specific time interval, our adaptive execution algorithm will calculate a volume profile and a ratio between Limit Order
+(LO) and Market Order (MO) and send the order at each time step until the end of the time interval. The algorithm can be tested in
+an order simulation system by using a historical data set from Stock Exchange of Thailand (SET).
+
 ### Software and version
 * Python 3.8.5
     * Flask 1.1.2
@@ -19,13 +17,13 @@ Stock Exchange of Thailand (SET).
 * Node.js 10.19.0
 
 ### Installation
-* Install all necessary python library
+* Install all necessary python libraries
 * Install Node.js
 * Use "npm install" at ./cmdf-frontend
 
 ### How to run
-* Use "npm start" at ./cmdf-frontend frontend will run on port 3000
-* At ./cmdf use "python backend_server.py" backend will run on port 1111
+* Use "npm start" at ./cmdf-frontend. The frontend part will run on port 3000
+* At ./cmdf use "python backend_server.py". The backend part will run on port 1111
 * go to port 3000 in your browser to use website
 
 ### Contirbutors
