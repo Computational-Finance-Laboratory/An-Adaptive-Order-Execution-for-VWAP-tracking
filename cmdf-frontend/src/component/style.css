@@ -1,0 +1,755 @@
+body {
+    font-family: 'Roboto';
+  }
+
+/* input */
+
+.cardinput{
+    display: grid;
+    grid-row: 1 / span 1;
+    position: absolute;
+    height: 100%;
+    max-width: 640px;
+    width: 100%;
+    /* white */
+    background: #FFFFFF;
+    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+
+.time{
+    position: absolute;
+    width: 110px;
+    height: 42px;
+    left: 83px;
+    top: 259px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    color: #1E4B72;
+    border-style: none;
+}
+
+
+
+.calendarBlock{
+    position: absolute;
+    width: 500px;
+    height: 117px;
+    top: 37px;
+    left: 70px;
+    
+    
+    /* base */
+    
+    background: #E4E5E6;
+    border-radius: 20px;
+}
+button{
+    border:0;
+    padding:0;
+    margin:0;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+
+/*--- calendarModule ---*/
+
+.calendarMonth-Year{
+    position: absolute;
+    width: 166px;
+    height: 117px;
+    left: 70px;
+    top: 37px;
+
+    background: #1E4B72;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.month-calendar{
+    left: 0;
+    top:0;
+    position: absolute;
+    width: 55px;
+    height: 28px;
+    padding-left: 94px;
+    padding-top: 60px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    
+    /* white */
+    
+    color: #FFFFFF;
+    
+}
+
+.year-calendar{
+    left: 0;
+    top:0;
+    position:absolute;
+    width: 55px;
+    height: 28px;
+    padding-left: 94px;
+    padding-top: 28px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    /* white */
+    color: #FFFFFF;
+}
+
+.logo-calendar{
+    
+    left: 0;
+    top:0;
+    position: absolute;
+    padding-left: 19px;
+    padding-top: 26.5px;
+    width: 64px;
+    height: 64px;
+    /* white */
+}
+.date-calendar{
+    position: absolute;
+    width: 73px;
+    height: 75px;
+    left: 294px;
+    top: 24px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4em;
+
+    color: #404040;
+    line-height: 75px;
+}
+
+.dateprev-calendar{
+    position: absolute;
+    width: 73px;
+    height: 75px;
+    left: 203px;
+    top: 24px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4em;
+    line-height: 75px;
+    /* dark */
+    color: rgba(64, 64, 64, 0.25);
+}
+.datenext-calendar{
+    position: absolute;
+    width: 73px;
+    height: 75px;
+    left: 391px;
+    top: 24px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4em;
+    line-height: 75px;
+    /* dark */
+    color: rgba(64, 64, 64, 0.25);
+}
+.modal-calendar{
+    position: absolute;
+    height: fit-content;
+    width: fit-content;
+    left: 7.5%;
+    top:25%;
+}
+/*-----------------------------------*/
+.card-data-out{
+    position: absolute;
+    width: 590px;
+    height: 625px; 
+    left: 25px;
+    top: 240px;
+
+    /* white */
+    border-style: none;
+    background-color:#FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+.card-data{
+    position: absolute;
+    top: 50px;
+    width: 590px;
+    height: 450px;
+    background-color: #FFFFFF;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+strong{
+    padding: 1rem;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+}
+.input-header{
+    background-color: #ffffff;
+    position: absolute;
+    top: 5px;
+    width: 590px;
+    height: 50px;
+
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+.input-header-ticker{
+    position: absolute;
+    left: 20px;
+    top: 0px;
+}
+.input-header-volume{
+    position: absolute;
+    left: 175px;
+    top: 0px;
+}
+.input-header-time-start{
+    position: absolute;
+    left: 279px;
+    top: 0px;
+}
+.input-header-time-end{
+    position: absolute;
+    left: 370px;
+    top: 0px;
+}
+
+
+
+/* --------- listTicker.js ------------- */
+.font-listticker{
+    position: absolute;
+    left: 20px;
+    top: 5px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    /* dark */
+    color: #404040;
+}
+.show-block{
+    display: flex;
+    flex-direction: row;
+    width: 550px;
+    height: 28px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.show-ticker{
+    position: absolute;
+    width: 43px;
+    height: 28px;
+    left: 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    /* dark */
+    color: #404040;
+}
+.show-volume{
+    position: absolute;
+    width: fit-content;
+    height: 28px;
+    right: 298px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    /* dark */
+    color: #404040;
+}
+.show-start-time{
+    position: absolute;
+    width: 60px;
+    height: 28px;
+    left: 270px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    /* dark */
+    color: #404040;
+}
+.show-end-time{
+    position: absolute;
+    width: 60px;
+    height: 28px;
+    left: 350px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    /* dark */
+    color: #404040;
+}
+.show-type{
+    position: absolute;
+    width: 60px;
+    height: 28px;
+    left: 430px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    /* dark */
+    color: #404040;
+}
+.button-delete{
+    border: none;
+    color: white;
+    margin-left: 520px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.logo-delete{
+    width: 20.8px;
+    height: 26px;
+    background-color: #FFFFFF;
+}
+/* -----------------------------------------*/
+/* --- Addlist.js ---*/
+.card-add-input{
+    position: absolute;
+    width: 591px;
+    height: 35px;
+    left: 25px;
+    top: 178px;
+    /*background-color: #BE0000;*/
+
+}
+.button-add{       
+    position: absolute;
+    width: 86px;
+    height: 35px;
+    right: 0px;
+    /* main */
+    background: #FFB216;
+    border-radius: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: white;
+    cursor: pointer;
+}
+.input-volomn{
+    position: absolute;
+    width: 83px;
+    height: 28px;
+    left: 115px;
+    border-style: none none solid none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    /* base */
+    color:#404040;
+;
+}
+.input-timestart{
+    position: absolute;
+    width: 83px;
+    height: 28px;
+    left: 230px;
+    border-style: none none solid none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    background-color: #FFFFFF;
+    color:#404040;
+}
+.input-timeend{
+    position: absolute;
+    width: 83px;
+    height: 28px;
+    left: 340px;
+    border-style: none none solid none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    background-color: #FFFFFF;
+    color:#404040;
+}
+.input-switch{
+    position: absolute;
+    width: 60px;
+    height: 32px;
+    left: 435px;
+
+    /* base */
+    background: #E4E5E6;
+    border-radius: 100px;
+}
+
+.input-dropdown{
+    position: absolute;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    /* base */
+    color: #000000;
+}
+/* DROPDOWN INPUT */
+ .react-autosuggest__container {
+    position: absolute;
+}
+  
+.react-autosuggest__input {
+    width: 94px;
+    height: 28px;
+
+
+    font-weight: 500;
+    font-size: 24px;
+
+    border-style: none none solid none;
+}
+  
+.react-autosuggest__input--focused {
+    outline: none;
+}
+  
+.react-autosuggest__input--open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+  
+.react-autosuggest__suggestions-container {
+    display: none;
+}
+  
+.react-autosuggest__suggestions-container--open {
+    display: block;
+    position: absolute;
+    top: 51px;
+    width: 110px;
+    border: 1px solid #aaa;
+    background-color: #fff;
+    
+    font-family: Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    z-index: 2;
+}
+  
+.react-autosuggest__suggestions-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+  
+.react-autosuggest__suggestion {
+    cursor: pointer;
+    padding: 10px 20px;
+}
+  
+.react-autosuggest__suggestion--highlighted {
+    background-color: #ddd;
+}
+  
+/* ----------------- */ 
+
+/* -------------------scroll -------------*/
+html {
+    scroll-behavior: smooth;
+}
+/* ---- */
+
+
+/* grid Header */
+.grid-container{
+    display: grid;
+    height:90%;
+    grid-template-columns: 70% 30%;
+    grid-gap:5px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 20px;
+}
+.grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.flex-container {
+    display: flex;
+    background-color: #f1f1f1;
+}
+
+
+.name-ticker-output{
+    flex-basis:content;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: #404040;
+    text-align: left;
+}
+.font-type-buy{
+    
+    left:10px;
+    flex-basis:content;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 42px;
+    color:#00BE08;
+    text-align: left;
+
+}
+.font-type-sell{
+    left:10px;
+    flex-basis:content;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 42px;
+    color: #BE0000;
+    text-align: left;
+}
+.font-output{
+    width: fit-content;
+    height: 23px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #404040;
+}
+.result-output{
+    width: fit-content;
+    height: 23px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: #404040;
+}
+
+
+
+.dash{
+
+    width: 90%;
+    margin: 0 10px 15px 20.5px;
+
+    border-bottom: 3px dashed #E4E5E5;
+
+}
+/* ------------ */
+
+/* --------------table output-------------------*/
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+    table-layout:fixed;
+    width:100%;
+}
+
+.products-tablescroll{
+    width: 100%;
+    overflow: scroll;
+    max-height: 100%;
+    text-align: center;
+
+}
+.products-table{
+    width: 100%;
+    max-height: 90%;;
+    text-align: center; 
+}
+
+td{
+font-size: 18;
+  padding:0px;
+  padding-bottom: 7px;
+  margin:0px;
+  border:2px;
+  border-right-color: #E4E5E6;
+  border-right-style: groove;
+
+}
+thead{
+
+    top:0;
+    width: 100%;
+}
+tbody{
+    width:100%;
+}
+th{
+    position:sticky;
+    top:0;
+    padding:0px;
+    margin:0px;
+    padding-bottom: 20px;
+    padding-top: 5px;
+    background-color: #FFFFFF;
+    border:2px;
+    border-right-style: groove;
+
+}
+
+.noline{
+   border-right-style: hidden
+}
+.header-table{
+    position: relative;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    margin-bottom: 3px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #e4e5e6;
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #E4E5E6; 
+  }
+  ::-webkit-resizer {
+      height: 80%;
+  }
+
+  /* ---------------------------------*/
+
+  /* showoutput.js */
+
+.grid-output{
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+    height: 100%;
+    width: 100%;
+    
+}
+/* ------------- Card Output ------------- */
+.card-output{
+    border-radius: 20px;
+    padding: .75rem;
+    margin:25px;
+    margin-bottom: 1rem;
+    border: 0;
+    flex-basis: 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color:#FFFFFF;
+    height: 90%;
+    width: 455px;
+    max-width: 455px;
+}
+
+.max-height{
+    height: 10%;
+    width: 100%;
+}
+.height-window{
+    height: 100%;
+    width: 100%;
+}
+.max-height-2{
+    height: 90%;
+    width: 100%;
+}
+
+.card-body{
+    height: 65%;
+}
+.card-header{
+    height: 35%;
+}
+/* */
+
+/*------------------------------------ SEARCH -------------------------------*/
+.suggest-input{
+    text-align: left;
+}
+.suggest-color{
+    display:inline-block;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #c2c3c4;
+}
+.suggest-ticker{
+    display: inline-block;
+    vertical-align: middle;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #404040;
+}
+
+
+
+/* ----- logo ----- */
+.logo-vector{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 22.6%;
+    bottom: 22.6%;
+    background: #FFB216;
+}

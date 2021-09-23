@@ -1,0 +1,23 @@
+.background-page{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1E4B72;
+}
+.Input{
+    position: absolute;
+    min-width: 640px;
+    width: 35%;
+    min-height: 900px;
+    height:100%;
+}
+.Output{
+    position: absolute;
+    left:650px;
+    top:0;
+    min-width: 60%;
+    width: 65%;
+    min-height: 900px;
+    height: 100%;
+    background-color: #1E4B72;
+}
