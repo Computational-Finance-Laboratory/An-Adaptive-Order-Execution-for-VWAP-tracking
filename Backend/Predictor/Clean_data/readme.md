@@ -189,7 +189,7 @@ use only pickle file
 ### Example output
 #### Exmaple of event file
 ```
-Timestamp	        Price	IsBid	Change   Flag1	Flag2	Mark	SeqNumber
+Timestamp	        Price	IsBid	      Change     Flag1 Flag2	   Mark	   SeqNumber
 2017-12-07 09:59:27	 6.05	T	     200000	 UPDATE	 LO	     0	    101584900
 2017-12-07 09:59:32	 6.45	F	     20000	 UPDATE	 LO	     0	    102092570
 2017-12-07 09:59:42	 6.3 	F	     1000	 UPDATE	 LO	     0	    102944150
@@ -205,11 +205,11 @@ Timestamp	        Price	IsBid	Change   Flag1	Flag2	Mark	SeqNumber
 ```
 #### Example of trade2 file ( select only necessary columns )
 ```
-SeqNumber	      Timestamp	   EventType2	Volume	Price	isTBL	OrderbookRef	OrderbookRef2	Side
-96952230	2017-12-07 09:58:55	AUCTION  	93300	6.25	 T		                                 A
-103412660	2017-12-07 09:59:47	T_TO_T  	25000	6.25		     103412830		                 B
-103663240	2017-12-07 09:59:50	T_TO_T  	50000	6.25		     103663410		                 B
-105133460	2017-12-07 10:00:05	T_TO_T  	20000	6.25		     105133630		                 B
-105218110	2017-12-07 10:00:06	T_TO_T  	50000	6.25		     105218280		                 B
+SeqNumber	      Timestamp	       EventType2      Volume	Price  isTBL	  OrderbookRef  OrderbookRef2	Side
+96952230	2017-12-07 09:58:55	AUCTION  	93300	6.25	 T		                          A
+103412660	2017-12-07 09:59:47	T_TO_T  	25000	6.25		   103412830		          B
+103663240	2017-12-07 09:59:50	T_TO_T  	50000	6.25		   103663410		          B
+105133460	2017-12-07 10:00:05	T_TO_T  	20000	6.25		   105133630		          B
+105218110	2017-12-07 10:00:06	T_TO_T  	50000	6.25		   105218280		          B
 
 ```
