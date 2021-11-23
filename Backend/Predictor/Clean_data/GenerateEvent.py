@@ -263,7 +263,7 @@ def gen( date , s , n ):
             #print("Trade : " , SeqNumber)
     for k in Trader:
         if Trader[k] > 0:
-            raise Exception(f"{k} Trade Nokoru")
+            raise Exception(f"Cannot process data , trading left on end of day at price {k}")
 
     Adder = np.array( Adder )
     Linker = np.array( Linker )
